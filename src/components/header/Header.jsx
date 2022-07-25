@@ -11,10 +11,10 @@ export default function Header() {
       <div className="header-hero-wrapper">
         <img src="Group.svg" alt="group" />
       </div>
-      <div className="learnmore-wrapper">
-        <h5>Learn more</h5>
+      <a href="#about" className="learnmore-wrapper">
+        Learn more
         <img src="icon_keyboard_down.png" alt="keyboard_down" />
-      </div>
+      </a>
     </header>
   );
 }
