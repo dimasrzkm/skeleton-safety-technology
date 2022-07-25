@@ -1,10 +1,17 @@
+@import "../../global.scss";
+
 .navbar {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
-  height: 50px;
+  height: $height_navbar;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
 
   .navbar-left {
     padding-left: 4rem;

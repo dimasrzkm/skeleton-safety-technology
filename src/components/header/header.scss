@@ -1,0 +1,58 @@
+@import "../../global.scss";
+
+.header {
+  height: calc(100vh - 86px);
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: $height_navbar;
+
+  .header-text-wrapper {
+    flex: .5;
+    padding-left: 4rem;
+    
+    h4 {
+      color: #3784FB;
+      font-size: 14px;
+    }
+    h2 {
+      color: white;
+      font-size: 56px;
+      line-height: 56px;
+      font-weight: 700;
+    }
+    h5 {
+      color: #9CA3AF;
+      font-size: 14px;
+    }
+  }
+  
+  .header-hero-wrapper {
+    padding-right: 4rem;
+  }
+  
+  .learnmore-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+
+    h5 { 
+      color: #fff;
+    }
+    img {
+      width: 14px;
+      height: 8px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
