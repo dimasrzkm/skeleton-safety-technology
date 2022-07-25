@@ -1,0 +1,62 @@
+@import "../../global.scss";
+
+.footer {
+  background-color: $secondary_black_color;
+  color: #fff;
+  
+  .footer-menus {
+    max-width: 763px;
+    margin: 0 auto;
+    padding: 48px 0;
+    display: flex;
+    justify-content: space-between;
+
+    .headquarter, .motovehicle, .safety {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+
+      .title {
+        color: $gray_50;
+      }
+
+      .body-menu {
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        color: $gray_300;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        li {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .headquerter {
+
+    }
+
+    .motovehicle {
+
+    }
+
+    .safety {
+
+    }
+
+
+  }
+
+  .footer-copyright {
+    max-width: 426px;
+    margin: 0 auto;
+    padding: 48px 0;
+    text-align: center;
+    font-size: 15px;
+    color: $thidrd_grey_color;
+  }
+}
