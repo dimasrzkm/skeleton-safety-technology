@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./Navbar.scss";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  function handleMenuBar() {
+    setOpen(!open);
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -12,7 +19,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="navbar-right">
+      <div className={`navbar-right ${ open ? "responsive-mobile" : "" }` }>
         <ul className="wrapper-links">
           <li>
             <a href="#" className="active">HOME</a>
@@ -27,7 +34,9 @@ export default function Navbar() {
             <a href="">DOWNLOADS</a>
           </li>
         </ul>
+        <img src="hamburger-close.png" alt="menu-close" className="menu-close" onClick={handleMenuBar}/>
       </div>
+      <img src="hamburger-open.png" alt="hamburger-menu" className="hamburger-icon" onClick={handleMenuBar} />
     </nav>
   );
 }

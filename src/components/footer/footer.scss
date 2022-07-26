@@ -11,6 +11,12 @@
     display: flex;
     justify-content: space-between;
 
+    @include responsive (mobile) {
+      flex-direction: column;
+      gap: 64px;
+      padding-bottom: 0;
+    }
+
     .headquarter, .motovehicle, .safety {
       display: flex;
       flex-direction: column;
@@ -35,20 +41,6 @@
         }
       }
     }
-
-    .headquerter {
-
-    }
-
-    .motovehicle {
-
-    }
-
-    .safety {
-
-    }
-
-
   }
 
   .footer-copyright {
@@ -58,5 +50,8 @@
     text-align: center;
     font-size: 15px;
     color: $thidrd_grey_color;
+    @include responsive (mobile) {
+      font-size: 14px;
+    }
   }
 }

@@ -2,8 +2,8 @@ import "./main.scss";
 export default function Main() {
   return (
     <main className="main" id="about">
-      <div className="about" >
-        <div className="about-small">
+      <div className="about">
+        <div className="about-component">
           <div className="wrapper-text-about">
             <h4>About the Company</h4>
             <h1>Serving for more than 22 years car and home owners.</h1>
@@ -21,7 +21,7 @@ export default function Main() {
             />
           </div>
         </div>
-        <div className="about-small-right">
+        <div className="about-component">
           <div className="wrapper-text-about">
             <h4>Our outstanding references</h4>
             <h1>
@@ -53,7 +53,7 @@ export default function Main() {
             />
           </div>
         </div>
-        <div className="about-small trust">
+        <div className="about-component">
           <div className="wrapper-text-about">
             <h4>Trust</h4>
             <h1>
@@ -73,17 +73,20 @@ export default function Main() {
         </div>
       </div>
       <div className="contact">
-          <div className="contact-small">
-            <div className="wrapper-text-contact">
-              <h4>Have we piqued your interest?</h4>
-              <h1>Contact us! Call us anytime if you think— would you use our services!</h1>
-              <p>We are always available</p>
-            </div>
-            <div className="wrapper-image-contact">
-              <img src="Contact.png" alt="contact" />
-            </div>
+        <div className="contact-component">
+          <div className="wrapper-text-contact">
+            <h4>Have we piqued your interest?</h4>
+            <h1>
+              Contact us! <br />
+              Call us anytime if you think— would you use our services!
+            </h1>
+            <p>We are always available</p>
+          </div>
+          <div className="wrapper-image-contact">
+            <img src="Contact.png" alt="contact" />
           </div>
         </div>
+      </div>
     </main>
   );
 }

@@ -9,3 +9,11 @@ $main_purple_color: #B523FA;
 $main_green_color: #5FD788;
 $main_blue_color: #3784FB;
 $height_navbar: 86px;
+
+@mixin responsive( $device ) {
+  @if $device == mobile {
+    @media only screen and (max-width: 599px) {
+      @content
+    }
+  }
+}
