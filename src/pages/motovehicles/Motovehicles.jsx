@@ -6,7 +6,7 @@ import "./motovehicles.scss";
 export default function Motovehicles() {
   return (
     <>
-      <Navbar />
+      <Navbar pageActive={"motovehicles"}/>
       <header className="header">
         <div className="moto-text-wrapper">
           <h4>Reversing camera</h4>

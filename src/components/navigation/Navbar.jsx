@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
-export default function Navbar() {
+export default function Navbar({ pageActive }) {
   const [open, setOpen] = useState(false);
 
   function handleMenuBar() {
@@ -20,24 +20,28 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className={`navbar-right ${ open ? "responsive-mobile" : "" }` }>
+      <div className={`navbar-right ${open ? "responsive-mobile" : ""}`}>
         <ul className="wrapper-links">
-          <li>
-            <Link to="/" className="active">Home</Link>
-          </li>
-          <li>
-            <Link to="/motovehicles">MOTOVEHICLES</Link>
-          </li>
-          <li>
-            <a href="">SAFETY</a>
-          </li>
-          <li>
-            <a href="">DOWNLOADS</a>
-          </li>
+          <Link to="/" className={`${pageActive === "home" ? "active" : ""}`}>
+            Home
+          </Link>
+          <Link to="/motovehicles" className={`${pageActive === "motovehicles" ? "active" : ""}`}>MOTOVEHICLES</Link>
+          <Link to="/">SAFETY</Link>
+          <Link to="/downloads" className={`${pageActive === "downloads" ? "active" : ""}`}>DOWNLOADS</Link>
         </ul>
-        <img src="hamburger-close.png" alt="menu-close" className="menu-close" onClick={handleMenuBar}/>
+        <img
+          src="hamburger-close.png"
+          alt="menu-close"
+          className="menu-close"
+          onClick={handleMenuBar}
+        />
       </div>
-      <img src="hamburger-open.png" alt="hamburger-menu" className="hamburger-icon" onClick={handleMenuBar} />
+      <img
+        src="hamburger-open.png"
+        alt="hamburger-menu"
+        className="hamburger-icon"
+        onClick={handleMenuBar}
+      />
     </nav>
   );
 }

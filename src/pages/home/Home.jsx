@@ -5,7 +5,7 @@ import "./home.scss";
 function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar pageActive={"home"} />
       <header className="header">
         <div className="header-text-wrapper">
           <h4>Security technology is a matter of trust</h4>
