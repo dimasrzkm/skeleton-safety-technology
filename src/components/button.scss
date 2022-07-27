@@ -1,0 +1,39 @@
+@import "../global.scss";
+
+.button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 80px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  color: #fff;
+  gap: 6px;
+
+  img {
+    height: 8px;
+    @include responsive (mobile) {
+      height: 14px;
+    }
+  }
+
+  &.blue-button {
+    margin-top: 32px;
+    background-color: #3784FB;
+    @include responsive (mobile) {
+      margin: 32px auto;
+    }
+  }
+  
+  @include responsive (mobile) {
+    align-items: center;
+    padding: 18px;
+    width: 75%;
+    gap: 7px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+}

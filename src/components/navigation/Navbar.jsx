@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 export default function Navbar() {
@@ -22,10 +23,10 @@ export default function Navbar() {
       <div className={`navbar-right ${ open ? "responsive-mobile" : "" }` }>
         <ul className="wrapper-links">
           <li>
-            <a href="#" className="active">HOME</a>
+            <Link to="/" className="active">Home</Link>
           </li>
           <li>
-            <a href="#">MOTOVEHICLES</a>
+            <Link to="/motovehicles">MOTOVEHICLES</Link>
           </li>
           <li>
             <a href="">SAFETY</a>

@@ -1,0 +1,301 @@
+@import "../../global.scss";
+
+.header {
+  height: calc(100vh - 86px);
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: $height_navbar;
+
+  @include responsive (mobile) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-text-wrapper {
+    flex: .5;
+    padding-left: 4rem;
+
+    @include responsive (mobile) {
+      flex: 1;
+      text-align: center;
+      line-height: 36px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    
+    h4 {
+      color: #3784FB;
+      font-size: 14px;
+
+      @include responsive (mobile) {
+        font-size: 28px;
+        font-weight: 500;
+        width: 65%;
+        margin: 0 auto;
+      }
+    }
+    h2 {
+      color: white;
+      font-size: 56px;
+      line-height: 56px;
+      font-weight: 700;
+
+      @include responsive (mobile) {
+        font-size: 56px;
+        line-height: 56px;
+        font-weight: 700;
+      }
+    }
+    h5 {
+      color: #9CA3AF;
+      font-size: 14px;
+
+      @include responsive (mobile) {
+        font-size: 24px;
+      }
+    }
+  }
+  
+  .header-hero-wrapper {
+    padding-right: 4rem;
+
+    @include responsive (mobile) {
+      display: none;
+    }
+  }
+  
+  .learnmore-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+
+    @include responsive (mobile) {
+      bottom: 5%;
+    }
+
+    img {
+      width: 14px;
+      height: 8px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.main {
+  padding: 8rem 4rem;  
+  
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    @include responsive (mobile) {
+      gap: 7.375rem;
+    }
+    
+    .about-component {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+
+      @include responsive (mobile) {
+        display: unset;        
+        text-align: center;
+      }
+      
+      .wrapper-text-about {
+        flex: .5;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+  
+        h4 {
+          color: $main_blue_color;
+          font-weight: 500;
+
+          @include responsive (mobile) {
+            font-weight: 700;
+            font-size: 1.4rem;
+          }
+        }
+        h1 {
+          position: relative;
+          font-size: 2.5rem;
+          font-weight: 800;
+
+          @include responsive (mobile) {
+            font-size: 30px;
+          }
+  
+          &::after {
+            content: "";
+            height: 5px;
+            width: 150px;
+            position: absolute;
+            bottom: -15px;
+            background-color: $third_grey_color;
+            border-radius: 20px;
+            left: 0;
+
+            @include responsive (mobile) {
+              bottom: -15px;
+              right: 0;
+              margin: 0 auto;
+            }
+
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 600;
+          flex: 1;
+          max-width: 70%;
+          margin-top: 10px;
+          color: $secondary_grey_color;
+          line-height: 24px;
+          
+          @include responsive (mobile) {
+            max-width: 100%;
+            font-size: 1.2rem;
+          }
+
+        }
+      }
+      .wrapper-image-about {
+        flex: .5;
+        display: flex;
+        justify-content: center;
+  
+        .thumbnail {
+          width: 250px;
+          height: 200px;
+          
+          @include responsive (mobile) {
+            display: none;
+          }
+
+        }
+      }
+
+      &.about-component:nth-child(2) {
+        .wrapper-text-about {
+          order: 2;
+          h4 {
+            color: $main_purple_color;
+          }
+        }
+        .wrapper-image-about {
+          order: 1;
+          justify-content: center;
+          align-items: center;  
+        }
+      }
+
+      &.about-component:last-child {
+        .wrapper-text-about {
+          h4 { color: $main_green_color; }
+          h1 { font-size: 2rem; }
+        }
+        .wrapper-image-about {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .contact {
+    margin-top: 198px;
+    
+    .contact-component {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+
+      @include responsive (mobile) {
+        display: unset;        
+        text-align: center;
+      }
+
+      .wrapper-text-contact {
+        flex: .5;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        h4 {
+          color: $main_blue_color;
+          font-weight: 500;
+          
+          @include responsive (mobile) {
+            font-weight: 700;
+            font-size: 1.5rem;
+          }
+        }
+        h1 {
+          position: relative;
+          font-size: 2.5rem;
+
+          @include responsive (mobile) {
+            font-size: 2rem;
+          }
+  
+          &::after {
+            content: "";
+            height: 5px;
+            width: 150px;
+            position: absolute;
+            bottom: -15px;
+            background-color: $third_grey_color;
+            border-radius: 20px;
+            left: 0;
+            
+            @include responsive (mobile) {
+              right: 0;
+              margin: 0 auto;
+            }
+          }
+        }
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          flex: 1;
+          max-width: 90%;
+          margin-top: 10px;
+          color: $secondary_grey_color;
+          text-align: left;
+          line-height: 24px;  
+
+          @include responsive (mobile) {
+            max-width: 100%;
+            text-align: center;
+          }
+        }
+      }
+      .wrapper-image-contact {
+        flex: .5;
+        display: flex;
+        justify-content: center;
+
+        @include responsive (mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
