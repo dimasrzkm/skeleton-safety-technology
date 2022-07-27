@@ -1,0 +1,221 @@
+@import "../../global.scss";
+
+.header-download {
+  height: calc(100vh - 86px);
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: $height_navbar;
+
+  @include responsive (mobile) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .download-text-wrapper {
+    flex: .5;
+    padding-left: 4rem;
+
+    @include responsive (mobile) {
+      text-align: center;
+      line-height: 36px;
+      padding: 0;
+    }
+    
+    h4 {
+      color: $additional_purple;
+      font-size: 14px;
+
+      @include responsive (mobile) {
+        font-size: 24px;
+        font-weight: 500;
+        width: 65%;
+        margin: 0 auto;
+      }
+    }
+    h2 {
+      color: white;
+      font-size: 56px;
+      line-height: 56px;
+      font-weight: 700;
+
+      @include responsive (mobile) {
+        font-size: 48px;
+        line-height: 56px;
+        font-weight: 700;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 45%;
+        background-color: $third_grey_color;
+        margin: 12px 0;
+        border-radius: 20px;
+
+        @include responsive (mobile) {
+          margin: 12px auto;
+        }
+      }
+    }
+    h5 {
+      color: $secondary_grey_color;
+      font-size: 14px;
+      line-height: 22px;
+
+      @include responsive (mobile) {
+        font-size: 18px;
+        max-width: 55%;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+  .download-hero-wrapper {
+    padding-right: 4rem;
+
+    @include responsive (mobile) {
+      display: none;
+    }
+  }
+  .button {
+    display: none;
+    @include responsive (mobile) {
+      display: flex;
+      width: 50%;
+    }
+  }
+}
+.main {
+  padding: 8rem 4rem;  
+
+  .wrapper-downloads {
+    display: flex;
+    
+    @include responsive (mobile) {
+      flex-direction: column;
+      gap: 87px;
+    }
+
+    .manual-component {
+      flex: .5;
+      display: flex;
+      flex-direction: column;
+      gap: 6.125rem;
+      align-items: center;
+
+      @include responsive (mobile) {
+        order: 2;
+      }
+      
+      h2 {
+        color: $additional_pink;
+        &::after {
+          content: "";
+          display: block;
+          height: 4px;
+          width: 110px;
+          background-color: #9CA3AF;
+          margin-bottom: 16px;
+          border-radius: 20px;
+          margin-left: -5px;
+        }
+      }
+      .manual {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        h4 {
+          font-size: 24px;
+        }
+        p {
+          text-align: center;
+          max-width: 55%;
+          font-weight: 700;
+          color: $secondary_grey_color;
+
+          @include responsive (mobile) {
+            max-width: 100%;
+          }
+        }
+        .button {
+          width: 30%;
+
+          @include responsive (mobile) {
+            width: 75%;
+          }
+
+          &.pink-button {
+            background-color: $additional_pink;
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+    .guides-component {
+      flex: .5;
+      display: flex;
+      flex-direction: column;
+      gap: 6.125rem;
+      align-items: center;
+
+      @include responsive (mobile) {
+        order: 1;
+      }
+      
+      h2 {
+        color: $main_blue_color;
+        &::after {
+          content: "";
+          display: block;
+          height: 4px;
+          width: 110%;
+          background-color: #9CA3AF;
+          margin-bottom: 16px;
+          border-radius: 20px;
+          margin-left: -5px;
+        }
+      }
+      .guides {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        h4 {
+          font-size: 24px;
+        }
+        p {
+          text-align: center;
+          max-width: 55%;
+          font-weight: 700;
+          color: $secondary_grey_color;
+          line-height: 24px;
+
+          @include responsive (mobile) {
+            max-width: 100%;
+          }
+
+        }
+        .button {
+          width: 30%;
+
+          @include responsive (mobile) {
+            width: 75%;
+          }
+
+          &.blue-button {
+            background-color: $main_blue_color;
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+}
